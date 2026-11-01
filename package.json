@@ -1,0 +1,20 @@
+{
+  "name": "obsidian-tema-de-iconos",
+  "version": "0.1.0",
+  "description": "Complemento de Obsidian: un tema de iconos automático para archivos y carpetas (Material Icon Theme o Material Symbols), como en VS Code y Positron.",
+  "type": "module",
+  "scripts": {
+    "generar": "node herramientas/generar.mjs",
+    "build": "node herramientas/generar.mjs && node esbuild.config.mjs",
+    "dev": "node esbuild.config.mjs --vigilar",
+    "test": "node herramientas/generar.mjs && node --test prueba/*.test.js"
+  },
+  "keywords": ["obsidian", "obsidian-plugin", "icons", "material-icon-theme", "material-symbols"],
+  "author": "achalmed",
+  "license": "MIT",
+  "devDependencies": {
+    "@material-symbols/svg-400": "0.48.0",
+    "esbuild": "0.28.2",
+    "material-icon-theme": "5.39.0"
+  }
+}

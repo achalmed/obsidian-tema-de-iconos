@@ -1,0 +1,10 @@
+{
+  "id": "tema-de-iconos",
+  "name": "Tema de iconos",
+  "version": "0.1.0",
+  "minAppVersion": "1.6.0",
+  "description": "Un tema de iconos automático para archivos y carpetas (Material Icon Theme o Material Symbols), por extensión, nombre y carpeta, como en VS Code y Positron.",
+  "author": "achalmed",
+  "authorUrl": "https://github.com/achalmed",
+  "isDesktopOnly": false
+}

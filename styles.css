@@ -1,0 +1,42 @@
+/* Tema de iconos — el icono de cada fila del explorador y de cada pestaña. */
+
+.ti-icono {
+  display: inline-block;
+  flex: 0 0 var(--ti-tam, 16px);
+  width: var(--ti-tam, 16px);
+  height: var(--ti-tam, 16px);
+  margin-inline-end: var(--size-4-1, 4px);
+  align-self: center;
+  background: var(--ti-img) center / contain no-repeat;
+}
+
+/* carpeta abierta */
+.nav-folder:not(.is-collapsed) > .nav-folder-title > .ti-icono {
+  background-image: var(--ti-img-a, var(--ti-img));
+}
+
+/* colores del tema o monocromo: el SVG como máscara sobre un color */
+body.ti-pintar .ti-icono {
+  background: var(--ti-color, var(--icon-color));
+  -webkit-mask: var(--ti-img) center / contain no-repeat;
+  mask: var(--ti-img) center / contain no-repeat;
+}
+body.ti-pintar .nav-folder:not(.is-collapsed) > .nav-folder-title > .ti-icono {
+  -webkit-mask-image: var(--ti-img-a, var(--ti-img));
+  mask-image: var(--ti-img-a, var(--ti-img));
+}
+body.ti-mono .ti-icono {
+  background-color: var(--nav-item-color, var(--text-muted));
+}
+
+body.ti-ocultar-etiqueta .nav-file-tag {
+  display: none;
+}
+
+/* pestañas: el icono del tema en lugar del de Obsidian */
+.workspace-tab-header-inner-icon.ti-con-icono > svg {
+  display: none;
+}
+.workspace-tab-header-inner-icon.ti-con-icono > .ti-icono {
+  margin-inline-end: 0;
+}
